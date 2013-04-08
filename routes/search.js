@@ -5,8 +5,10 @@ var logic = require('services');
  */
 
 exports.results = function(req, res){
-	result = logic.restaurantFinder(req.body.address);
-	console.log('here'+result);
-	res.render('search/results', { title: 'Find restaurants nearby.', results: result});
+	logic.restaurantFinder(req.body.address, function(result){
+		var restaurants = result;
+		console.log('here'+restaurants);
+		res.render('search/results', { title: 'Find restaurants nearby.', results: restaurants});
+	});
 };
 

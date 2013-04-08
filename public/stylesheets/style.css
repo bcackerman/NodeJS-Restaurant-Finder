@@ -1,6 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
+  background:#f7f7f7 url('../img/bg.jpg') no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment:fixed;
 }
 a {
   color: #00B7FF;
@@ -10,12 +16,20 @@ h1 {
 	font-weight:300;
 	margin:0 0 35px 0;
 }
+h1 a{
+	color:white;
+	text-shadow:0 1px 1px rgba(0, 0, 0, .7)
+}
+h1 a:hover{
+	color:white;
+	text-decoration: none;
+}
 #search-box{
 	margin: 0;
 	background: transparent;
 	border: none;
-	border-bottom: 1px solid #000;
-	color: #000;
+	border-bottom: 1px solid #fff;
+	color: #fff;
 	line-height: 1.7em;
 	font-family: inherit;
 	font-size: 1.5em;
@@ -27,7 +41,48 @@ h1 {
 	-webkit-border-radius: 0px;
 	border-radius: 0px;
 }
+.search-icon{
+	width:20px;
+	height:20px;
+	float:left;
+	margin:10px 6px 0 0;
+}
 ::-webkit-input-placeholder { color:#e7e7e7; }
 ::-moz-placeholder { color:#e7e7e7; } /* firefox 19+ */
 :-ms-input-placeholder { color:#e7e7e7; } /* ie */
 input:-moz-placeholder { color:#e7e7e7; }
+#results{
+
+}
+#results .result{
+	background:white;
+	-webkit-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+	margin:0 0 20px 0;
+	-webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+#results .result .description {
+	padding:15px;
+
+}
+#results .result .description h3{
+	font-weight:300;
+	font-size:2.5em;
+	margin:0;
+	padding:0;
+}
+#results .result .description h4 {
+	margin:0 0 5px 0;
+	font-weight:600;
+}
+#results .result .description h4 a{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size:.8em;
+	color:#ababab;
+}
+#results .result  .map{
+	-webkit-border-radius: 3px 3px 0px 0px;
+	border-radius: 3px 3px 0px 0px;
+}

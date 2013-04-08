@@ -1,6 +1,18 @@
 <% layout('../layout') -%>
-below:
-<% for(i in results) { -%>
-	<%= results[i].address %>
-<% } %>
+
+<div id="results">
+	<% for(i in results) { -%>
+		<div class="result">
+			<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= results[i].latitude %>,<%= results[i].longitude %>&zoom=14&size=620x70
+	&markers=color:blue%7Clabel:S%7C<%= results[i].latitude %>,<%= results[i].longitude %>&sensor=false" class="map" />
+			<div class="description">
+				<h3><%= results[i].name %></h3>
+				<h4>
+					<a href="https://maps.google.com/maps?q=<%= results[i].name %>"><%= results[i].address %></a>
+				</h4>
+			</div>
+		</div>
+	<% } %>
+</div>
+
 
