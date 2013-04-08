@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+  	<div class="container">
+  		<div class="row-fluid">
+  			<div class="span8 offset2">
+  		    <h1>Search for restaurants around you.</h1>
+  				<form method="post" action="/search">
+  				  <p>
+  				    <input type="text" name="address" placeholder="ex. 333 W. Hubbard, Chicago" id="search-box" class="span12" autofocus="autofocus" />
+  				  </p>
+  				</form>
+  				<%- body -%>
+  			</div>
+  		</div>
+  	</div>
+  </body>
+</html>
