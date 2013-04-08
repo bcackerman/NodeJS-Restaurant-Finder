@@ -5,7 +5,8 @@ var logic = require('services');
  */
 
 exports.results = function(req, res){
-	res.render('search/results', { title: 'Find restaurants nearby.' }, logic.restaurantFinder(req.body.address));
-}
-
+	result = logic.restaurantFinder(req.body.address);
+	console.log('here'+result);
+	res.render('search/results', { title: 'Find restaurants nearby.', results: result});
+};
 
